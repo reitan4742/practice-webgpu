@@ -9,4 +9,8 @@ app.get("/triangle", (req, res) => {
     res.sendFile(__dirname + "/public/triangle.html");
 });
 
+app.get("/compute", (req, res) => {
+    res.sendFile(__dirname + "/public/compute.html");
+});
+
 app.listen(PORT);
