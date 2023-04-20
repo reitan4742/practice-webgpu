@@ -17,4 +17,8 @@ app.get("/inzkyk", (req, res) => {
     res.sendFile(__dirname + "/public/inzkyk.html");
 });
 
+app.get("/f1", (req, res) => {
+    res.sendFile(__dirname + "/public/f1.html");
+});
+
 app.listen(PORT);

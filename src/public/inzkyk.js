@@ -86,19 +86,19 @@ async function init() {
     passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64)); // workgroupの個数
     passEncoder.end(); // 計算パスのエンコードの終了
     commandEncoder.copyBufferToBuffer( // BufferからBufferへのコピーを行う
-    output,
-    0, // Source offset
-    stagingBuffer,
-    0, // Destination offset
-    BUFFER_SIZE
+        output,
+        0, // Source offset
+        stagingBuffer,
+        0, // Destination offset
+        BUFFER_SIZE
     );
     const commands = commandEncoder.finish(); // コマンドのエンコードの終了
     device.queue.submit([commands]); // コマンドバッファをキューに入れる
 
     await stagingBuffer.mapAsync( // バッファをマップをする要求を送る
-    GPUMapMode.READ,
-    0, // Offset
-    BUFFER_SIZE // Length
+        GPUMapMode.READ,
+        0, // Offset
+        BUFFER_SIZE // Length
     );
     const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE); // マップされたバッファをArrayBufferとする
     const data = copyArrayBuffer.slice(); // アンマップされると消えるのでjs側にコピーを用意
