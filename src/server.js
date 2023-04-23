@@ -21,4 +21,12 @@ app.get("/f1", (req, res) => {
     res.sendFile(__dirname + "/public/f1.html");
 });
 
+app.get("/f2", (req, res) => {
+    res.sendFile(__dirname + "/public/f2.html");
+});
+
+app.get("/inter", (req, res) => {
+    res.sendFile(__dirname + "/public/inter.html");
+});
+
 app.listen(PORT);
