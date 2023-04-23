@@ -150,3 +150,6 @@ GPUの結果書き込み用のバッファであるoutputの作成と、ステ�
 そしてGPUはコマンドキューに送られたコマンドを実行する。コマンドがいつ終わるかわからないが、ステージングバッファをマップする要求がすぐに送られる。
 
 getMappedRangeを使うことでArrayBufferとしてJavaScriptから見えるようになる。このArrayBufferはマップされた実際のメモリを指すので、unmap()するとdetachedになってしまうので、sliceを用いてJavaScriptで保持されるようなコピーを作成している。
+
+
+vertex shaderとfragment shaderの間の接続はindexによって行われ、変数はlocationによって接続されている。
