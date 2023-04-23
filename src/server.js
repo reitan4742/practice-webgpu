@@ -37,4 +37,16 @@ app.get("/uniforms2", (req, res) => {
     res.sendFile(__dirname + "/public/uniforms2.html");
 });
 
+app.get("/uniforms3", (req, res) => {
+    res.sendFile(__dirname + "/public/uniforms3.html");
+});
+
+app.get("/storage", (req, res) => {
+    res.sendFile(__dirname + "/public/storage.html");
+});
+
+app.get("/storage2", (req, res) => {
+    res.sendFile(__dirname + "/public/storage2.html");
+});
+
 app.listen(PORT);
