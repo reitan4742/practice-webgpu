@@ -29,4 +29,12 @@ app.get("/inter", (req, res) => {
     res.sendFile(__dirname + "/public/inter.html");
 });
 
+app.get("/uniforms", (req, res) => {
+    res.sendFile(__dirname + "/public/uniforms.html");
+});
+
+app.get("/uniforms2", (req, res) => {
+    res.sendFile(__dirname + "/public/uniforms2.html");
+});
+
 app.listen(PORT);
