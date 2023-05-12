@@ -49,4 +49,16 @@ app.get("/storage2", (req, res) => {
     res.sendFile(__dirname + "/public/storage2.html");
 });
 
+app.get("/vertex", (req, res) => {
+    res.sendFile(__dirname + "/public/vertex.html");
+});
+
+app.get("/index", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/texture", (req, res) => {
+    res.sendFile(__dirname + "/public/texture.html");
+});
+
 app.listen(PORT);
